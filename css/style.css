@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    gap: 50px;
+    padding: 0 15px;
+    margin: 0 auto;
+    position: fixed;
+    height: 70px;
+    background-color: white;
+}
+
+.logo-header img{
+    width: 20vw;
+}
+
+.navigator{
+    display: flex;
+    gap: 50px;
+}
+
+.navigator li a{
+    list-style: none;
+    font-weight: 500;
+    padding: 10px 0;
+}
+
+.navigator a:hover{
+    color: #E10165;
+}
+
+#programas{
+    position: relative;
+}
+
+#programas:hover .sub-menu{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.2s ease-out;
+}
+
+#programas .sub-menu{
+    position: absolute;
+    margin-top: 30px;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-out;
+}
+
+#programas .sub-menu li{
+    padding: 10px 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+#programas .sub-menu li span{
+    font-weight: 500;
+}
+
+#programas .sub-menu li img{
+    width: 25px;
+}
+
+#programas .sub-menu li:hover{
+    background-color: #848484c3;
+}
+
+.hero-page{
+    background-color: #444C55;
+    padding-top: 70px;
+}
+
+.hero-page-content{
+    max-width: 1480px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 50vh;
+    padding: 15px;
+    
+}
+
+.hero-page-content img{
+    margin: 0 auto;
+    height: 35vw;
+}
+
+.hero-page-content p{
+    margin: 0 auto;
+    text-align: center;
+    max-width: px;
+    font-size: 3vw;
+    color: white;
+    font-family: "Roboto", system-ui, sans-serif;
+}
+
+#first-text{
+    font-size: 4.5vw;
+}
+
+.strong{
+    font-weight: 700;
+}
+
+.color-word{
+    color: #F8006F;
+}
+
+.options-page{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-content: center;
+}
+.option{
+    text-align: center;
+    padding: 2em;
+    color: white;
+}
+
+.option h2{
+    max-width: 270px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+.option p{
+    font-size: 12px;
+    max-width: 150px;
+    margin: 0 auto;
+    font-weight: 600;
+}
+.option1{
+    background-color: #282A37;
+}
+.option2{
+    background-color: #FBB506;
+
+}
+.option3{
+    background-color: #F8006F;
+}
+
+.option1:hover{
+    background-color: #0E0F13;
+}
+
+.option2:hover{
+    background-color: #E3A200;
+}
+
+.option3:hover{
+    background-color: #E10165;
+}
