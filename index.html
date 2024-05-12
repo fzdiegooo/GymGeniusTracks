@@ -9,6 +9,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/form-image.js" defer></script>
   </head>
   <body>
     <header class="header-page">
@@ -31,7 +32,7 @@
                   <a href="html/parteEntrenar.html">
                     <span>PERDER PESO</span>
                     <img src="img/exercises.png" alt="" />
-                  </a>  
+                  </a>
                 </li>
                 <li>
                   <a href="">
@@ -44,7 +45,6 @@
                     <span>MANTENER EN FORMA</span>
                     <img src="img/back.png" alt="" />
                   </a>
-                  
                 </li>
               </ul>
             </li>
@@ -55,12 +55,91 @@
               <a href="">TIENDA</a>
             </li>
             <li id="btn-entrar" class="nav-main">
-              <a href="">ENTRAR</a>
+              <a>ENTRAR</a>
             </li>
           </ul>
         </div>
       </div>
     </header>
+    <div id="pop-up-background" class="pop-up-background">
+      <article class="pop-up-form">
+        <img id="img-form" src="img/magymboo.jpg" alt="" />
+        <section id="form-register" class="pop-up-form-register">
+          <p>Registrate</p>
+          <div class="input-container">
+            <input
+              type="text"
+              name=""
+              placeholder="Nombre Completo"
+              id="name"
+            />
+          </div>
+          <div class="input-container">
+            <input
+              type="text"
+              name=""
+              placeholder="Correo Electronico"
+              id="email"
+            />
+          </div>
+          <div class="input-container">
+            <input
+              type="password"
+              placeholder="Contraseña"
+              name=""
+              id="password"
+            />
+          </div>
+          <div class="input-container">
+            <input
+              type="password"
+              placeholder="Repetir Contraseña"
+              name=""
+              id="password"
+            />
+          </div>
+          <div class="container-register">
+            <button id="btn-register">Ingresar</button>
+            <p>
+              ¿Tienes una cuenta creada?
+              <a class="strong" id="btn-sign-in">Iniciar Sesion</a>
+            </p>
+          </div>
+        </section>
+        <section id="form-login" class="pop-up-form-login">
+          <p>Bienvenido</p>
+          <div class="input-container">
+            <input
+              type="text"
+              name=""
+              placeholder="Correo Electronico"
+              id="email"
+            />
+          </div>
+          <div class="input-container">
+            <input
+              type="password"
+              placeholder="Contraseña"
+              name=""
+              id="password"
+            />
+          </div>
+          <div class="forgot-password-container">
+            <a>¿Olvidaste tu contraseña?</a>
+          </div>
+          <div class="container-login">
+            <button id="btn-login">Ingresar</button>
+            <p>
+              ¿Aún no tienes una cuenta?
+              <a class="strong" id="btn-create-account">CREA UNA AQUI</a>
+            </p>
+          </div>
+        </section>
+        <div id="btn-exit-container" class="pop-up-close">
+          <p id="btn-exit">X</p>
+        </div>
+      </article>
+    </div>
     <main>
       <div class="hero-page">
         <div class="hero-page-content">
@@ -89,9 +168,12 @@
         </a>
         <a href="">
           <div class="option option2">
-            <h2>CURSOS ONLINE <span class="strong">ESCUELA GYM VIRTUAL</span></h2>
+            <h2>
+              CURSOS ONLINE <span class="strong">ESCUELA GYM VIRTUAL</span>
+            </h2>
             <p>
-              Aprende, gane salud y mejora tu estilo de vida y bienestar emocional
+              Aprende, gane salud y mejora tu estilo de vida y bienestar
+              emocional
             </p>
           </div>
         </a>
@@ -104,6 +186,47 @@
           </div>
         </a>
       </div>
+      <div class="gym-info-container">
+        <div class="gym-info-container-text">
+          <p id="gym-info-title"><span>GYM</span>GENIUSTRACKS</p>
+          <p>
+            Este es un espacio dedicado a aquellos que desean mejorar, aprender
+            y lograr resultados desde la comodidad de su hogar. Así que si te
+            identificas con esto... <span class="strong">¡Bienvenido/a!</span>
+          </p>
+          <p>
+            Algunos han estado entrenando con nosotros durante años, mientras
+            que otros nos descubrieron durante momentos como la cuarentena. Pero
+            lo que el tiempo ha demostrado es que todos coinciden en algo: aquí
+            se obtienen resultados. Sí, es posible. Nuestra filosofía es simple,
+            te facilitamos el camino para que logres tus metas.
+          </p>
+          <p>Tú solo tienes que poner tus ganas y un poquito de tu tiempo.</p>
+          <p>
+            <span class="strong">¡Quédate y compruébalo por ti mismo!</span>
+          </p>
+          <button id="btn-conocer">CONOCER MEJOR A GYMGENIUSTRACKS</button>
+        </div>
+        <div class="gym-info-container-video">
+          <video src="img/videoGym.mp4" controls></video>
+        </div>
+      </div>
+      <div class="gym-info-banner">
+        <div class="gym-info-banner-container">
+          <p>TU CUERPO ENTIENDE DE ESTÍMULOS, NO DE DÓNDE ENTRENAS</p>
+          <p>
+            Y hacerlo en casa, son todo ventajas. Sin horarios que te limiten.
+            Ahorrando tiempo y dinero en desplazamientos. Pudiendo elegir clases
+            acorde a tu nivel. Evitando ambientes agobiantes. Sin aforos
+            limitados.
+          </p>
+        </div>
+      </div>
     </main>
+    <div class="wsp-fix-logo">
+      <a target="_blank" href="https://wa.link/ucnaa6"
+        ><img src="img/whatsapp_logo_icon_186881.png" alt=""
+      /></a>
+    </div>
   </body>
 </html>

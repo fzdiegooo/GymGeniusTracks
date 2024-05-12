@@ -171,6 +171,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: default;
 }
 
 .main-content-text p {
@@ -222,7 +223,7 @@ main {
 
 .option:hover > p {
   color: rgb(233, 52, 67);
-  transition: all 0.1s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .option > p {
@@ -231,6 +232,10 @@ main {
   font-size: 5vw;
   color: white;
   font-weight: 500;
+}
+
+.option:active{
+  transform: scale(.98);
 }
 
 .option-info {
@@ -277,6 +282,7 @@ main {
   backdrop-filter: blur(3.7px);
   -webkit-backdrop-filter: blur(4.7px);
   border: 1px solid rgba(56, 65, 74, 0.5);
+  cursor: default;
 }
 
 .calendar-day {
@@ -288,7 +294,7 @@ main {
   font-family: "Bebas Neue";
   font-size: 2vw;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
 }
 
 .calendar-day p:nth-child(2){
@@ -296,5 +302,5 @@ main {
   font-family: "Bebas Neue";
   font-size: 1.7vw;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
