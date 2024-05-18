@@ -11,7 +11,6 @@
 }
 
 body {
-  overflow-x: hidden;
   position: relative;
 }
 
@@ -50,6 +49,7 @@ a {
 .nav-main > a {
   list-style: none;
   font-weight: 500;
+  font-size: 15px;
   padding: 10px 0;
 }
 
@@ -163,6 +163,15 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  animation: popUp .4s ease-out;
+}
+
+@keyframes popUp{
+  0%{
+    transform: translateY(-500px);
+  }100%{
+    transform: translateY(0);
+  }
 }
 
 .pop-up-close{
@@ -175,11 +184,11 @@ a {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  z-index: 7
-  ;
+  z-index: 7;
 }
 
-.pop-up-close p{
+
+.pop-up-close i{
   color: #353846;
   font-size: 25px;
   font-weight: 900;
@@ -272,22 +281,21 @@ a {
 }
 
 #btn-register{
-  font-size: 20px;
-  padding: 0.5em 1em;
+  height: 50px;
   width: 300px;
   font-weight: 500;
   background: #f8006f;
+  font-size: 16px;
   color: #fff;
   border-radius: 10px;
-  border: 2px solid #f8006f;
+  border: none;
   cursor: pointer;
   transition: all .1s ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 #btn-register:hover{
-  background: #fff;
-  color: #f8006f;
+  background: #e10165;
   transition: all .1s ease-in-out;
 }
 
@@ -308,45 +316,50 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 25px;
   outline: none;
+  gap: 10px;
 }
 
 .input-container{
+  display: flex;
+  align-items: center;
+  gap: 2px;
   position: relative;
+  border-radius: 10px;
+  padding: 0 10px;
+  width: 300px;
+  height: 50px;
+  outline: none;
+  border: 1.5px solid #ecedec;
+  position: relative;
+  transition: all .1s ease-out;
 }
 
-.input-container input:focus{
-  border: 2px solid #f8006f;
+.input-container:focus-within{
+  border: 1.5px solid #f8006f;
   box-shadow: #f8006f 0px 0px 5px;
   transition: all .1s ease-out;
 }
 
+.input-container input{
+  width: 100%;
+  padding-left: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
 .pop-up-form-login p{
   font-size: 40px;
   font-weight: 900;
 }
 
-.input-container input{
-  padding: .5em 1em;
-  border-radius: 10px;
-  width: 300px;
-  font-size: 20px;
-  outline: none;
-  border: 2px solid black;
-  position: relative;
-  transition: all .1s ease-out;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.password-container{
-  display: flex;
-  flex-direction: column;
-}
-
 .forgot-password-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 300px;
-  margin-top: -20px;
+  text-align: end;
+  margin-top: -5px;
 }
 
 .forgot-password-container a{
@@ -355,27 +368,39 @@ a {
   font-size: 12px;
 }
 
-.password-container a:hover{
+.remember-cbx{
+  display: flex;
+  gap: 5px;
+  font-size: 12px;
+}
+
+.forgot-password-container a:hover{
   color: red;
 }
 
+.label-form{
+  width: 300px;
+  font-weight: 500;
+  text-align: start;
+}
+
 #btn-login{
-  font-size: 20px;
-  padding: 0.5em 1em;
+  height: 50px;
   width: 300px;
   font-weight: 500;
   background: #f8006f;
+  font-size: 16px;
   color: #fff;
   border-radius: 10px;
-  border: 2px solid #f8006f;
+  border: none;
   cursor: pointer;
+  margin-top: 10px;
   transition: all .1s ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 #btn-login:hover{
-  background: #fff;
-  color: #f8006f;
+  background: #e10165;
   transition: all .1s ease-in-out;
 }
 
@@ -567,22 +592,33 @@ a {
   right: 20px;
   border-radius: 50px;
   z-index: 999;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
-  transition: all 0.1s ease-out;
+  animation: wspScale 1s ease-out infinite;
 }
 
 .wsp-fix-logo img {
-  width: 100%;
-  height: 100%;
+  width: 70px;
+  height: 70px;
 }
 
-.wsp-fix-logo:hover {
+.wsp-fix-logo:hover{
+  animation: none;
   scale: 1.1;
+}
+
+@keyframes wspScale{
+  0%{
+    scale: 1;
+  }50%{
+    scale: 1.1;
+  }100%{
+    scale: 1;
+  }
 }

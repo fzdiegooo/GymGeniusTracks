@@ -1,39 +1,221 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>¡HAZTE SOCIO!</title>
-    <link rel="stylesheet" href="../css/hazteSocio.css">
-</head>
-<body>
+    <script
+      src="https://kit.fontawesome.com/307148e55f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/hazteSocio.css" />
+    <script src="../js/form-image.js" defer></script>
+  </head>
+  <body>
     <header class="header-page">
+      <div class="header-container">
         <div class="logo-header">
-            <a href="../index.html"><img src="../img/gym-logo.png" alt=""></a>
+          <img src="../img/gym-logo.png" alt="" />
         </div>
-
-        <ul class="nav-header">
-            <a href="../hazteSocio.html"><li>¡HAZTE SOCIO!</li></a>
-            <a href="#"><li>RETO</li></a>
-            <a href="#"><li>TIENDA</li></a>
-            <a href="#"><li id="btn-entrar">ENTRAR</li></a>
-        </ul>
+        <div>
+          <ul class="navigator">
+            <li class="nav-main">
+              <a href="#">¡HAZTE SOCIO!</a>
+            </li>
+            <li class="nav-main">
+              <a href="platEntrenamiento.html">PLATAFORMA ENTRENAMIENTO</a>
+            </li>
+            <li id="programas" class="nav-main">
+              <a href="">PROGRAMAS <i class="fa-solid fa-caret-down"></i></a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="parteEntrenar.html">
+                    <span>PERDER PESO</span>
+                    <img src="../img/exercises.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span>AUMENTAR MUSCULO</span>
+                    <img src="../img/muscle.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span>MANTENER EN FORMA</span>
+                    <img src="../img/back.png" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-main">
+              <a href="">ESCUELA VIRTUAL</a>
+            </li>
+            <li class="nav-main">
+              <a href="">TIENDA</a>
+            </li>
+            <li id="btn-entrar" class="nav-main">
+              <a>ENTRAR</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
-    <main class="main-page">
-        <div class="main-content">
-            <div class="image-hero">
-                <img src="../img/magymboo.jpg" alt="">
+    <div id="pop-up-background" class="pop-up-background">
+      <article class="pop-up-form">
+        <img id="img-form" src="../img/magymboo.jpg" alt="" />
+        <section id="form-register" class="pop-up-form-register">
+          <p>Registrate</p>
+          <div class="input-container">
+            <input
+              type="text"
+              name=""
+              placeholder="Nombre Completo"
+              id="name"
+            />
+          </div>
+          <div class="input-container">
+            <input
+              type="text"
+              name=""
+              placeholder="Correo Electronico"
+              id="email"
+            />
+          </div>
+          <div class="input-container">
+            <input
+              type="password"
+              placeholder="Contraseña"
+              name=""
+              id="password"
+            />
+          </div>
+          <div class="input-container">
+            <input
+              type="password"
+              placeholder="Repetir Contraseña"
+              name=""
+              id="password"
+            />
+          </div>
+          <div class="container-register">
+            <button id="btn-register">Ingresar</button>
+            <p>
+              ¿Tienes una cuenta creada?
+              <a class="strong" id="btn-sign-in">Iniciar Sesion</a>
+            </p>
+          </div>
+        </section>
+        <section id="form-login" class="pop-up-form-login">
+          <p>Iniciar Sesión</p>
+          <label class="label-form" for="email">Email</label>
+          <div class="input-container">
+            <i class="fa-solid fa-at"></i>
+            <input
+              type="text"
+              name=""
+              placeholder="Correo Electronico"
+              id="email-input"
+            />
+          </div>
+          <label class="label-form" for="password">Contraseña</label>
+          <div class="input-container input-container-password">
+            <i class="fa-solid fa-lock"></i>
+            <input
+              type="password"
+              placeholder="Contraseña"
+              id="password-input"
+            />
+          </div>
+          <div class="forgot-password-container">
+            <div class="remember-cbx">
+              <input type="checkbox" name="" id="remember-cbx" />
+              <label for="remember-cbx">Recuérdame</label>
             </div>
-            <div class="text-hero">
-                <p class="first-text">OBTÉN <span class="color-word">7 DÍAS GRATIS</span></p>
-                <p class="second-text">PARA PROBAR</p>
-                <p class="third-text">GYM GENIUS TRACKS</p>
-                <p class="fourth-text">PARA TODOS LOS NIVELES * SEA CÚAL SEA TU OBJETIVO * SIN PERMANENCIA</p>
-                <p class="fifth-text">LA PLATAFORMA DE ENTRENAMIENTO ONLINE PARA</p>
-                <p class="sixth-text">PONERTE EN FORMA Y ENTRENAR DESDE CASA</p>
-                <a href=""><button id="btn-probar">QUIERO PROBAR 7 DÍAS</button></a>
-            </div>
+            <a>¿Olvidaste tu contraseña?</a>
+          </div>
+          <div class="container-login">
+            <button id="btn-login">Ingresar</button>
+            <p>
+              ¿Aún no tienes una cuenta?
+              <a class="strong" id="btn-create-account">Crea una aquí</a>
+            </p>
+          </div>
+        </section>
+        <div id="btn-exit-container" class="pop-up-close">
+          <i id="btn-exit" class="fa-regular fa-circle-xmark"></i>
         </div>
-    </main>
-</body>
+      </article>
+    </div>
+    <main>
+      <div class="video-main">
+          <video src="../img/videoGym.mp4" autoplay loop muted ></video>
+      </div>
+      <div class="text-main">
+          <p class="first-text">¡EL CAMBIO HACIA </p>
+          <p class="second-text">TU PROGRESO!</p>
+          <p class="third-text">ENTRENA DESDE CASA</p>
+          <p class="fourth-text">TU SUSCRIPCIÓN AL MEJOR PRECIO</p>
+          <a href="../html/hazteSocio.html"><button>UNIRME A LA PLATAFORMA</button></a>
+      </div>
+  </main>
+  <div class="plan-container">
+    <div class="plan">
+      <div class="plan-content">
+        <div class="plan-header">
+          <i class="fa-solid fa-dumbbell"></i>
+          <p class="plan-header-type">Prueba Gratis</p>
+          <p class="plan-header-price">S/ 0</p>
+        </div>
+        <div class="plan-benefits">
+          <div class="benefit">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Primeros 7 DÍAS GRATIS en GYMGENIUSTRACKS con acceso a TODO EL CONTENIDO.</p>
+          </div>
+        </div>
+      </div>
+      <button class="btn-inscribirse">Inscribirse</button>
+    </div>
+    <div class="plan" id="main-plan">
+      <div class="plan-content">
+        <div class="plan-header">
+          <i class="fa-solid fa-dumbbell"></i>
+          <p class="plan-header-type">Plan Mensual</p>
+          <p class="plan-header-price">S/ 40</p>
+        </div>
+        <div class="plan-benefits">
+          <div class="benefit">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Acceso a TODOS los planes de entrenamiento, para que sepas lo que tienes que entrenar cada día.</p>
+          </div>
+          <div class="benefit">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Pautas de alimentación con menús saludables, para que sepas lo que tienes que comer cada día.</p>
+          </div>
+          <div class="benefit">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Nuevas rutinas y contenido cada semana.</p>
+          </div>
+        </div>
+      </div>
+      <button class="btn-inscribirse">Inscribirse</button>
+    </div>
+    <div class="plan">
+      <div class="plan-content">
+        <div class="plan-header">
+          <i class="fa-solid fa-dumbbell"></i>
+          <p class="plan-header-type">Plan Anual</p>
+          <p class="plan-header-price">S/ 300</p>
+        </div>
+        <div class="plan-benefits">
+          <div class="benefit">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Acceso libre a toda la página</p>
+          </div>  
+        </div>
+      </div>
+      <button class="btn-inscribirse">Inscribirse</button>
+    </div>
+  </div>
+  </body>
 </html>

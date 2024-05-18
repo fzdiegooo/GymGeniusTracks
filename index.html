@@ -20,7 +20,7 @@
         <div>
           <ul class="navigator">
             <li class="nav-main">
-              <a href="">¡HAZTE SOCIO!</a>
+              <a href="html/hazteSocio.html">¡HAZTE SOCIO!</a>
             </li>
             <li class="nav-main">
               <a href="html/platEntrenamiento.html">PLATAFORMA ENTRENAMIENTO</a>
@@ -107,36 +107,43 @@
           </div>
         </section>
         <section id="form-login" class="pop-up-form-login">
-          <p>Bienvenido</p>
+          <p>Iniciar Sesión</p>
+          <label class="label-form" for="email">Email</label>
           <div class="input-container">
+            <i class="fa-solid fa-at"></i>
             <input
               type="text"
               name=""
               placeholder="Correo Electronico"
-              id="email"
+              id="email-input"
             />
           </div>
-          <div class="input-container">
+          <label class="label-form" for="password">Contraseña</label>
+          <div class="input-container input-container-password">
+            <i class="fa-solid fa-lock"></i>
             <input
               type="password"
               placeholder="Contraseña"
-              name=""
-              id="password"
+              id="password-input"
             />
           </div>
           <div class="forgot-password-container">
+            <div class="remember-cbx">
+              <input type="checkbox" name="" id="remember-cbx">
+              <label for="remember-cbx">Recuérdame</label>
+            </div>
             <a>¿Olvidaste tu contraseña?</a>
           </div>
           <div class="container-login">
             <button id="btn-login">Ingresar</button>
             <p>
               ¿Aún no tienes una cuenta?
-              <a class="strong" id="btn-create-account">CREA UNA AQUI</a>
+              <a class="strong" id="btn-create-account">Crea una aquí</a>
             </p>
           </div>
         </section>
         <div id="btn-exit-container" class="pop-up-close">
-          <p id="btn-exit">X</p>
+          <i id="btn-exit" class="fa-regular fa-circle-xmark"></i>
         </div>
       </article>
     </div>
